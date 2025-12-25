@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "325982be-8112-4262-8163-e1dd20804df2",
+		"name": "RealState",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34847039"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcm90ZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMzI0MCwiZXhwIjoxNzY1NjE0MTQwLCJqdGkiOiIzYjFhZjg4Ni01YTZiLTQ1OGMtYjQ0Yy0zZTgzMThlYTliZTgifQ.N8GtPZZ4nfheW4XpHQIQjfu1syJinwFzZUWS6jfj7ns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserProfile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcm90ZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMzI0MCwiZXhwIjoxNzY1NjE0MTQwLCJqdGkiOiIzYjFhZjg4Ni01YTZiLTQ1OGMtYjQ0Yy0zZTgzMThlYTliZTgifQ.N8GtPZZ4nfheW4XpHQIQjfu1syJinwFzZUWS6jfj7ns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserProfile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcm90ZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMzI0MCwiZXhwIjoxNzY1NjE0MTQwLCJqdGkiOiIzYjFhZjg4Ni01YTZiLTQ1OGMtYjQ0Yy0zZTgzMThlYTliZTgifQ.N8GtPZZ4nfheW4XpHQIQjfu1syJinwFzZUWS6jfj7ns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"Ahmed Ali\",\r\n    \"phone\": \"0123456789\",\r\n    \"location\":\"TahaNup\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadAvatar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcm90ZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMzI0MCwiZXhwIjoxNzY1NjE0MTQwLCJqdGkiOiIzYjFhZjg4Ni01YTZiLTQ1OGMtYjQ0Yy0zZTgzMThlYTliZTgifQ.N8GtPZZ4nfheW4XpHQIQjfu1syJinwFzZUWS6jfj7ns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/D:/quran/05f0d529-079b-4a99-aaf2-be5535afe96a.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/avatar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcm90ZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMzI0MCwiZXhwIjoxNzY1NjE0MTQwLCJqdGkiOiIzYjFhZjg4Ni01YTZiLTQ1OGMtYjQ0Yy0zZTgzMThlYTliZTgifQ.N8GtPZZ4nfheW4XpHQIQjfu1syJinwFzZUWS6jfj7ns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/693d1d44c545288278e0899a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"693d1d44c545288278e0899a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"AmroTestt\",\r\n  \"email\": \"AmroTestt999@example.com\",\r\n  \"phone\": \"01022223344\",\r\n  \"password\": \"12345678\",\r\n  \"confirmPassword\": \"12345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"AmroTestt999@example.com\",\r\n\"password\": \"12345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/verify-email?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFtcm9UZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMjg2OCwiZXhwIjoxNzY1Njk5MjY4fQ.sZWt0FgAKEUCzfjJ1lN3iwF7vcAu5DdUwWvMYTizQh4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"verify-email"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFtcm9UZXN0dDk5OUBleGFtcGxlLmNvbSIsImlhdCI6MTc2NTYxMjg2OCwiZXhwIjoxNzY1Njk5MjY4fQ.sZWt0FgAKEUCzfjJ1lN3iwF7vcAu5DdUwWvMYTizQh4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
